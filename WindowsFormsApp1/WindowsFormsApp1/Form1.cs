@@ -16,9 +16,39 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-            testbotten testbotten = new testbotten();
+//          testbotten testbotten = new testbotten(0,0,100,100);
+//
+//          Controls.Add(testbotten);
+//
+//        InitializeComponent();
+//
+//        testbotten testbotten2 = new testbotten(100,100,100,100);
+//
+//        Controls.Add(testbotten2);
 
-            Controls.Add(testbotten);
+    //      int a = 1;
+    //      int b = 10;
+    //      int c = 10;
+    //      int d = 10;
+    //      int e = 10;
+    //      while (a <= 10)
+    //      {
+    //          testbotten testbotten = new testbotten( b, c, c, d);
+    //
+    //          Controls.Add(testbotten );
+    //
+    //          a++; b += 10;  c += 10; d += 10; e += 10;
+    //
+    //      }
+
+            for( int i = 0; i < 10; i++)
+            {
+                testbotten testbotten = new testbotten(i,(i % 3)*100,(i / 3)*100,100,100);
+
+                Controls.Add(testbotten);
+            }
+
+
 
         }
     }
