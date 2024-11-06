@@ -14,6 +14,9 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+
+        testlabel _testLabel;
+
         public Form1()
         {
             InitializeComponent();
@@ -45,23 +48,25 @@ namespace WindowsFormsApp1
 
             for( int i = 0; i < 10; i++)
             {
-                testbotten testbotten = new testbotten(i,(i % 3)*100,(i / 3)*100,100,100);
+                testbotten testbotten = new testbotten(this,i,(i % 3)*100,(i / 3)*100,100,100);
 
                 Controls.Add(testbotten);
             }
 
 
-           testlabel testLabel = new testlabel("ラベルです。", 500, 300, 100, 500);
-            Controls.Add(testLabel);
+           _testLabel= new testlabel("ラベルです。", 500, 300, 100, 500);
+            Controls.Add(_testLabel);
 
             //Label label = new Label();
             //label.Location = new Point(30, 400);
             //label.Text = "ラベルです";
             //Controls.Add(label);
-
-
-
-
         }
+
+        public void LabelTextUpdate(string str)
+        {
+            _testLabel.TextUpdate(str);
+        }
+
     }
 }

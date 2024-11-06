@@ -12,8 +12,14 @@ namespace WindowsFormsApp1
 {
     internal class testbotten : Button
     {
-        public testbotten(int id,int x,int y,int widht,int heigth)
+
+        Form1 _form1;
+
+        public testbotten(Form1 form1,int id,int x,int y,int widht,int heigth)
         {
+
+            _form1 = form1;
+
             //ClickイベントにOnClick関数を登録
             //ボタンをクリックしたときに登録した関数を実行します
             Click += OnClick;
@@ -31,8 +37,7 @@ namespace WindowsFormsApp1
 
         public void OnClick(object sender, EventArgs s)
         {
-            MessageBox.Show(Text);
-
+            _form1.LabelTextUpdate(Text);
         }
     }
 }

@@ -24,5 +24,10 @@ namespace cs_Form
             Size = new Size(widht, heigth);
         }
 
+        public void TextUpdate(string str)
+        {
+            Text = str;
+        }
+
     }
 }
