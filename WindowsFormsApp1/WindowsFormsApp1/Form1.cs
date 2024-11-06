@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cs_Form;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Properties;
 
 namespace WindowsFormsApp1
 {
@@ -47,6 +49,16 @@ namespace WindowsFormsApp1
 
                 Controls.Add(testbotten);
             }
+
+
+           testlabel testLabel = new testlabel("ラベルです。", 500, 300, 100, 500);
+            Controls.Add(testLabel);
+
+            //Label label = new Label();
+            //label.Location = new Point(30, 400);
+            //label.Text = "ラベルです";
+            //Controls.Add(label);
+
 
 
 
