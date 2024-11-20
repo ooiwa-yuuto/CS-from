@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    internal class Test_Text_Box :TextBox
+    internal class Test_Text_Box : TextBox
     {
-        public Test_Text_Box (string str, int x, int y, int widht, int heigth)
+        public Test_Text_Box(string str, int x, int y, int widht, int heigth)
         {
 
             //ボタン内に文字を表示させる
@@ -22,6 +22,18 @@ namespace WindowsFormsApp1
 
             //ボタンの大きさ
             Size = new Size(widht, heigth);
+
+
         }
+
+        public string TextUpdate(string str)
+        {
+            string temp = Text;
+            Text = str;
+
+            return temp;
+
+        }
+
     }
 }

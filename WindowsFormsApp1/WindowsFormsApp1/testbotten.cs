@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using System.Windows.Forms;
 
@@ -52,7 +48,14 @@ namespace WindowsFormsApp1
 
         public void OnClick(object sender, EventArgs s)
         {
-            _form1.LabelTextUpdate(Text);
+            string  p = _form1. ButtenLabelTextUpdate/*ButtenLabelReplacement*/(Text);
+            Text = p;
+            //_form1.ButtenLabelTextUpdate(Text);
         }
+      //public void TextUpdate(string str)
+      //{
+      //    Text = str;
+      //}
+      
     }
 }

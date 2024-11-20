@@ -19,6 +19,8 @@ namespace WindowsFormsApp1
 
         Test_Text_Box  _textBox;
 
+        testbotten _testbotten;
+
         public Form1()
         {
             InitializeComponent();
@@ -68,19 +70,19 @@ namespace WindowsFormsApp1
 
                 string id =  strs[i];
 
-                testbotten testbotten = new testbotten(this,id,(i % 3)*100,(i / 3)*100,100,100);
+               /* testbotten testbotten*/ _testbotten = new testbotten(this,id,(i % 3)*100,(i / 3)*100,100,100);
            
-               Controls.Add(testbotten);
+               Controls.Add(_testbotten);
                
            }
 
 
 
-
-           _testLabel= new testlabel("ラベルです。", 500, 300, 100, 500);
+           
+            _testLabel = new testlabel("ラベルです。", 500, 330, 100, 100);
             Controls.Add(_testLabel);
 
-            _textBox = new Test_Text_Box("ラベルです。", 10, 300, 500, 100);
+            _textBox = new Test_Text_Box("ラベルです。", 100, 300, 500, 100);
             Controls.Add(_textBox);
 
 
@@ -91,10 +93,32 @@ namespace WindowsFormsApp1
             //Controls.Add(label);
         }
 
-        public void LabelTextUpdate(string str)
+        public string ButtenLabelTextUpdate(string str)
         {
+            //_testbotten.TextUpdate(str);
+           // _testbotten.TextUpdate(str);
+            //_testbotten.TextUpdate(str);
+            //_testbotten.TextUpdate(str);
+            //_testbotten.TextUpdate(str);
+            //_testbotten.TextUpdate(str);
+            //_testbotten.TextUpdate(str);
+            //_testbotten.TextUpdate(str);
+            //_testbotten.TextUpdate(str);
+            //_testbotten.TextUpdate(str);
             _testLabel.TextUpdate(str);
+
+            string s = _textBox.TextUpdate(str);
+             return s;
         }
+
+        /* public string ButtenLabelReplacement(string str) 
+         * {
+         *string s =  _textBox.TextReplacement(str);
+         * 
+         * 
+         * 
+         *retrm s;
+         * }*/
 
     }
 }
