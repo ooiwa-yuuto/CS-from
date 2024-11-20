@@ -17,45 +17,73 @@ namespace WindowsFormsApp1
 
         testlabel _testLabel;
 
+        Test_Text_Box  _textBox;
+
         public Form1()
         {
             InitializeComponent();
 
-//          testbotten testbotten = new testbotten(0,0,100,100);
-//
-//          Controls.Add(testbotten);
-//
-//        InitializeComponent();
-//
-//        testbotten testbotten2 = new testbotten(100,100,100,100);
-//
-//        Controls.Add(testbotten2);
+            //          testbotten testbotten = new testbotten(0,0,100,100);
+            //
+            //          Controls.Add(testbotten);
+            //
+            //        InitializeComponent();
+            //
+            //        testbotten testbotten2 = new testbotten(100,100,100,100);
+            //
+            //        Controls.Add(testbotten2);
 
-    //      int a = 1;
-    //      int b = 10;
-    //      int c = 10;
-    //      int d = 10;
-    //      int e = 10;
-    //      while (a <= 10)
-    //      {
-    //          testbotten testbotten = new testbotten( b, c, c, d);
-    //
-    //          Controls.Add(testbotten );
-    //
-    //          a++; b += 10;  c += 10; d += 10; e += 10;
-    //
-    //      }
+            //      int a = 1;
+            //      int b = 10;
+            //      int c = 10;
+            //      int d = 10;
+            //      int e = 10;
+            //      while (a <= 10)
+            //      {
+            //          testbotten testbotten = new testbotten( b, c, c, d);
+            //
+            //          Controls.Add(testbotten );
+            //
+            //          a++; b += 10;  c += 10; d += 10; e += 10;
+            //
+            //      }
 
-            for( int i = 0; i < 10; i++)
+            string[] strs = new string[]
             {
-                testbotten testbotten = new testbotten(this,i,(i % 3)*100,(i / 3)*100,100,100);
+               "9",
+               "a",
+               "b",
+               "c",
+               "d",
+               "e",
+               "f",
+               "g",
+               "h",
+               "i"
+            };
 
-                Controls.Add(testbotten);
-            }
+
+           for (int i = 0; i < 10; i++)
+           {
+
+                string id =  strs[i];
+
+                testbotten testbotten = new testbotten(this,id,(i % 3)*100,(i / 3)*100,100,100);
+           
+               Controls.Add(testbotten);
+               
+           }
+
+
 
 
            _testLabel= new testlabel("ラベルです。", 500, 300, 100, 500);
             Controls.Add(_testLabel);
+
+            _textBox = new Test_Text_Box("ラベルです。", 10, 300, 500, 100);
+            Controls.Add(_textBox);
+
+
 
             //Label label = new Label();
             //label.Location = new Point(30, 400);

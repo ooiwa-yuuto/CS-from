@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
 
         Form1 _form1;
 
-        public testbotten(Form1 form1,int id,int x,int y,int widht,int heigth)
+        public testbotten(Form1 form1,/*int id*/string id,int x,int y,int widht,int heigth)
         {
 
             _form1 = form1;
@@ -25,8 +25,23 @@ namespace WindowsFormsApp1
             Click += OnClick;
 
             //ボタン内に文字を表示させる
-            Text = id.ToString();
-           
+           // Text = id.ToString();
+            Text = id;
+
+    //       string[] azu = new string[10];
+    //
+    //       azu[0] = "a";
+    //       azu[1] = "b";
+    //       azu[2] = "c";
+    //       azu[3] = "d";
+    //       azu[4] = "e";
+    //       azu[5] = "f";
+    //       azu[6] = "g";
+    //       azu[7] = "h";
+    //       azu[8] = "i";
+    //       azu[9] = "j";
+    //
+    //       Text = azu[id].ToString();
 
             //ボタンの生成場所を指定
             Location = new Point(x,y);

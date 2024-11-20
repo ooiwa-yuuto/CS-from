@@ -58,6 +58,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Properties\testrabel.cs" />
+    <Compile Include="Test Text Box.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="testbotten.cs">
       <SubType>Component</SubType>
     </Compile>
